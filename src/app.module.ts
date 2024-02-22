@@ -5,7 +5,6 @@ import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { MediaModule } from './media/media.module';
 import { CommentModule } from './comment/comment.module';
-import { LocationModule } from './location/location.module';
 import { AuthService } from './auth/auth.service';
 import { AuthController } from './auth/auth.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -15,7 +14,7 @@ import { CommentEntity } from './comment/comment.entity';
 import { RelationshipModule } from './relationship/relationship.module';
 
 @Module({
-  imports: [RelationshipModule, AuthModule, UserModule, MediaModule, CommentModule, LocationModule,TypeOrmModule.forRoot({
+  imports: [RelationshipModule, AuthModule, UserModule, MediaModule, CommentModule,TypeOrmModule.forRoot({
     type: 'postgres',
     host: 'localhost',
     port: 5432,
